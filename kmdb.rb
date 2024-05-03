@@ -262,7 +262,14 @@ puts ""
 movies = Movie.all
 
 for movie in movies
-    
+    title = movie["title"]
+    year_released = movie["year_released"]
+    rated = movie["rated"]
+    studio = movie["studio"]
+
+    puts 
+end
+   
 # Prints a header for the cast output
 puts ""
 puts "Top Cast"
