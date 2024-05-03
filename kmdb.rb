@@ -284,6 +284,8 @@ for movie in movies
     year_released = movie["year_released"]
     rated = movie["rated"]
     studio = movie["studio"]
+
+    puts "#{title}\t#{year_released}\t#{rated}\t#{studio}"
 end
    
 # Prints a header for the cast output
