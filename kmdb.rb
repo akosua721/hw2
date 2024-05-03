@@ -164,10 +164,9 @@ actor["name"] = "Anne Hathaway"
 actor.save
 
 #Roles
-role = Role.new
-Batman Begins = Movie.find_by({"title" => "Batman Begins"})
-The Dark Knight  = Movie.find_by({"title" => "The Dark Knight"})
-The Dark Knight Rises = Movie.find_by({"title" => "The Dark Knight Rises"})
+batman_begins = Movie.find_by({"title" => "Batman Begins"})
+the_dark_knight = Movie.find_by({"title" => "The Dark Knight"})
+the_dark_knight_rise = Movie.find_by({"title" => "The Dark Knight Rises"})
 
 christian_bale = Actor.find_by({"name" => "Christian Bale"})
 michael_caine = Actor.find_by({"name" => "Michael Caine"})
@@ -178,29 +177,29 @@ heath_ledger = Actor.find_by({"name" => "Heath Ledger"})
 aaron_eckhart = Actor.find_by({"name" => "Aaron Eckhart"})
 maggie_gyllenhaal = Actor.find_by({"name" => "Maggie Gyllenhaal"})
 tom_hardy = Actor.find_by({"name" => "Tom Hardy"})
-joseph_gordon-Levitt = Actor.find_by({"name" => "Joseph Gordon-Levitt"})
+joseph_gordon_levitt = Actor.find_by({"name" => "Joseph Gordon-Levitt"})
 anne_hathaway = Actor.find_by({"name" => "Anne Hathaway"})
 
-
-role["title"] = Batman Begins["title"]
+role = Role.new
+role["movie"] = batman_begins["title"]
 role["actor"] = "Christian Bale"
 role["character_name"] = "Bruce Wayne"
 role.save
 
 role = Role.new
-role["movie"] = "Batman Begins"
+role["movie"] = batman_begins["title"]
 role["actor"] = "Michael Caine"
 role["character_name"] = "Alfred"
 role.save
 
 role = Role.new
-role["movie"] = "Batman Begins"
+role["movie"] = batman_begins["title"]
 role["actor"] = "Liam Neeson"
 role["character_name"] = "Ra's Al Ghul"
 role.save
 
 role = Role.new
-role["movie"] = "Batman Begins"
+role["movie"] = batman_begins["title"]
 role["actor"] = "Katie Holmes"
 role["character_name"] = "Rachel Dawes"
 role.save
