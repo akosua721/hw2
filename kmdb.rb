@@ -99,23 +99,23 @@ warner_bros = Studio.find_by({"name" => "Warner Bros."})
 
 movie = Movie.new
 movie["title"] = "Batman Begins"
-movie["year_released"] = "2005"
+movie["year_released"] = 2005
 movie["rated"] = "PG-13"
-movie["studio"] = Warner Bros.["name"]
+movie["studio"] = warner_bros["name"]
 movie.save
 
 movie = Movie.new
 movie["title"] = "The Dark Night"
-movie["year_released"] = "2008"
+movie["year_released"] = 2008
 movie["rated"] = "PG-13"
-movie["studio"] = Warner Bros.["name"]
+movie["studio"] = warner_bros["name"]
 movie.save
 
 movie = Movie.new
 movie["title"] = "The Dark Night Rises"
-movie["year_released"] = "2012"
+movie["year_released"] = 2012
 movie["rated"] = "PG-13"
-movie["studio"] = Warner Bros.["name"]
+movie["studio"] = warner_bros["name"]
 movie.save
 
 #Actors
