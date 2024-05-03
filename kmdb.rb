@@ -76,13 +76,181 @@
 # Delete existing data, so you'll start fresh each time this script is run.
 # Use `Model.destroy_all` code.
 # TODO!
+Studio.destroy_all
+Movie.destroy_all
+Actor.destroy_all
+Role.destroy_all
 
 # Generate models and tables, according to the domain model.
 # TODO!
 
+
 # Insert data into the database that reflects the sample data shown above.
 # Do not use hard-coded foreign key IDs.
 # TODO!
+#Studio
+studio = Studio.new
+studio["name"] = "Warner Bros."
+studio.save
+
+
+#Movies
+movie = Movie.new
+movie["title"] = "Batman Begins"
+movie["year_released"] = "2005"
+movie["rated"] = "PG-13"
+movie["studio"] = "Warner Bros."
+movie.save
+
+movie = Movie.new
+movie["title"] = "The Dark Night"
+movie["year_released"] = "2008"
+movie["rated"] = "PG-13"
+movie["studio"] = "Warner Bros."
+movie.save
+
+movie = Movie.new
+movie["title"] = "The Dark Night Rises"
+movie["year_released"] = "2012"
+movie["rated"] = "PG-13"
+movie["studio"] = "Warner Bros."
+movie.save
+
+#Actors
+actor = Actor.new
+actor["name"] = "Christian Bale"
+actor.save
+
+actor = Actor.new
+actor["name"] = "Michael Caine"
+actor.save
+
+actor = Actor.new
+actor["name"] = "Liam Neeson"
+actor.save
+
+actor = Actor.new
+actor["name"] = "Katie Holmes"
+actor.save
+
+actor = Actor.new
+actor["name"] = "Gary Oldman"
+actor.save
+
+actor = Actor.new
+actor["name"] = "Heath Ledger"
+actor.save
+
+actor = Actor.new
+actor["name"] = "Aaron Eckhart"
+actor.save
+
+actor = Actor.new
+actor["name"] = "Maggie Gyllenhaal"
+actor.save
+
+actor = Actor.new
+actor["name"] = "Tom Hardy"
+actor.save
+
+actor = Actor.new
+actor["name"] = "Joseph Gordon-Levitt"
+actor.save
+
+actor = Actor.new
+actor["name"] = "Anne Hathaway"
+actor.save
+
+#Roles
+role = Role.new
+role["movie"] = "Batman Begins"
+role["actor"] = "Christian Bale"
+role["character_name"] = "Bruce Wayne"
+role.save
+
+role = Role.new
+role["movie"] = "Batman Begins"
+role["actor"] = "Michael Caine"
+role["character_name"] = "Alfred"
+role.save
+
+role = Role.new
+role["movie"] = "Batman Begins"
+role["actor"] = "Liam Neeson"
+role["character_name"] = "Ra's Al Ghul"
+role.save
+
+role = Role.new
+role["movie"] = "Batman Begins"
+role["actor"] = "Katie Holmes"
+role["character_name"] = "Rachel Dawes"
+role.save
+
+role = Role.new
+role["movie"] = "Batman Begins"
+role["actor"] = "Gary Oldman"
+role["character_name"] = "Commissioner Gordon"
+role.save
+
+role = Role.new
+role["movie"] = "The Dark Night"
+role["actor"] = "Christian Bale"
+role["character_name"] = "Bruce Wayne"
+role.save
+
+role = Role.new
+role["movie"] = "The Dark Night"
+role["actor"] = "Heath Ledger"
+role["character_name"] = "Joker"
+role.save
+
+role = Role.new
+role["movie"] = "The Dark Night"
+role["actor"] = "Aaron Eckhart"
+role["character_name"] = "Harvey Dent"
+role.save
+
+role = Role.new
+role["movie"] = "The Dark Night"
+role["actor"] = "Michael Caine"
+role["character_name"] = "Alfred"
+role.save
+
+role = Role.new
+role["movie"] = "The Dark Night"
+role["actor"] = "Maggie Gyllenhaul"
+role["character_name"] = "Rachel Dawes"
+role.save
+
+role = Role.new
+role["movie"] = "The Dark Night Rises"
+role["actor"] = "Christian Bale"
+role["character_name"] = "Bruce Wayne"
+role.save
+
+role = Role.new
+role["movie"] = "The Dark Night Rises"
+role["actor"] = "Gary Oldman"
+role["character_name"] = "Commissioner Gordon"
+role.save
+
+role = Role.new
+role["movie"] = "The Dark Night Rises"
+role["actor"] = "Tom Hardy"
+role["character_name"] = "Bane"
+role.save
+
+role = Role.new
+role["movie"] = "The Dark Night Rises"
+role["actor"] = " Joseph Gordon Levitt"
+role["character_name"] = "John Blake"
+role.save
+
+role = Role.new
+role["movie"] = "The Dark Night Rises"
+role["actor"] = "Anne Hathaway"
+role["character_name"] = " Selina Kyle"
+role.save
 
 # Prints a header for the movies output
 puts "Movies"
@@ -91,7 +259,10 @@ puts ""
 
 # Query the movies data and loop through the results to display the movies output.
 # TODO!
+movies = Movie.all
 
+for movie in movies
+    
 # Prints a header for the cast output
 puts ""
 puts "Top Cast"
