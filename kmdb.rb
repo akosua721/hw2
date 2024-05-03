@@ -301,10 +301,12 @@ puts ""
 
 # Query the cast data and loop through the results to display the cast output for each movie.
 # TODO!
-for movie in movies
-    title = movie["title"]
-    role = movie["role"]
+roles = Role.all
 
+for role in roles 
+    title = role["movie"]
+    actor = role["actor"]
+    character_name = role["character_name"]
 
-    roles
+    puts "#{title}\t#{actor}\t#{character_name}"
 end
