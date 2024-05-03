@@ -83,6 +83,11 @@ Role.destroy_all
 
 # Generate models and tables, according to the domain model.
 # TODO!
+#rails generate model Studio
+#rails generate model Movie
+#rails generate model Actor
+#rails generate model Role
+#rails db:migrate
 
 
 # Insert data into the database that reflects the sample data shown above.
@@ -296,3 +301,10 @@ puts ""
 
 # Query the cast data and loop through the results to display the cast output for each movie.
 # TODO!
+for movie in movies
+    title = movie["title"]
+    role = movie["role"]
+
+
+    roles
+end
