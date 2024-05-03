@@ -95,25 +95,27 @@ studio.save
 
 
 #Movies
+warner_bros = Studio.find_by({"name" => "Warner Bros."})
+
 movie = Movie.new
 movie["title"] = "Batman Begins"
 movie["year_released"] = "2005"
 movie["rated"] = "PG-13"
-movie["studio"] = "Warner Bros."
+movie["studio"] = Warner Bros.["name"]
 movie.save
 
 movie = Movie.new
 movie["title"] = "The Dark Night"
 movie["year_released"] = "2008"
 movie["rated"] = "PG-13"
-movie["studio"] = "Warner Bros."
+movie["studio"] = Warner Bros.["name"]
 movie.save
 
 movie = Movie.new
 movie["title"] = "The Dark Night Rises"
 movie["year_released"] = "2012"
 movie["rated"] = "PG-13"
-movie["studio"] = "Warner Bros."
+movie["studio"] = Warner Bros.["name"]
 movie.save
 
 #Actors
@@ -163,7 +165,24 @@ actor.save
 
 #Roles
 role = Role.new
-role["movie"] = "Batman Begins"
+Batman Begins = Movie.find_by({"title" => "Batman Begins"})
+The Dark Knight  = Movie.find_by({"title" => "The Dark Knight"})
+The Dark Knight Rises = Movie.find_by({"title" => "The Dark Knight Rises"})
+
+Christian Bale = Actor.find_by({"name" => "Christian Bale"})
+Michael Caine = Actor.find_by({"name" => "Michael Caine"})
+Liam Neeson = Actor.find_by ({"name" => "Liam Neeson"})
+Katie Holmes = Actor.find_by ({"name" => "Katie Holmes"})
+Gary Oldman = Actor.find_by ({"name" => "Gary Oldman"})
+Heath Ledger = Actor.find_by ({"name" => "Heath Ledger"})
+Aaron Eckhart = Actor.find_by ({"name" => "Aaron Eckhart"})
+Maggie Gyllenhaal = Actor.find_by ({"name" => "Maggie Gyllenhaal"})
+Tom Hardy = Actor.find_by ({"name" => "Tom Hardy"})
+Joseph Gordon-Levitt = Actor.find_by ({"name" => "Joseph Gordon-Levitt"})
+Anne Hathaway = Actor.find_by ({"name" => "Anne Hathaway"})
+
+
+role["title"] = Batman Begins["title"]
 role["actor"] = "Christian Bale"
 role["character_name"] = "Bruce Wayne"
 role.save
@@ -193,61 +212,61 @@ role["character_name"] = "Commissioner Gordon"
 role.save
 
 role = Role.new
-role["movie"] = "The Dark Night"
+role["movie"] = "The Dark Knight"
 role["actor"] = "Christian Bale"
 role["character_name"] = "Bruce Wayne"
 role.save
 
 role = Role.new
-role["movie"] = "The Dark Night"
+role["movie"] = "The Dark Knight"
 role["actor"] = "Heath Ledger"
 role["character_name"] = "Joker"
 role.save
 
 role = Role.new
-role["movie"] = "The Dark Night"
+role["movie"] = "The Dark Knight"
 role["actor"] = "Aaron Eckhart"
 role["character_name"] = "Harvey Dent"
 role.save
 
 role = Role.new
-role["movie"] = "The Dark Night"
+role["movie"] = "The Dark Knight"
 role["actor"] = "Michael Caine"
 role["character_name"] = "Alfred"
 role.save
 
 role = Role.new
-role["movie"] = "The Dark Night"
+role["movie"] = "The Dark Knight"
 role["actor"] = "Maggie Gyllenhaul"
 role["character_name"] = "Rachel Dawes"
 role.save
 
 role = Role.new
-role["movie"] = "The Dark Night Rises"
+role["movie"] = "The Dark Knight Rises"
 role["actor"] = "Christian Bale"
 role["character_name"] = "Bruce Wayne"
 role.save
 
 role = Role.new
-role["movie"] = "The Dark Night Rises"
+role["movie"] = "The Dark Knight Rises"
 role["actor"] = "Gary Oldman"
 role["character_name"] = "Commissioner Gordon"
 role.save
 
 role = Role.new
-role["movie"] = "The Dark Night Rises"
+role["movie"] = "The Dark Knight Rises"
 role["actor"] = "Tom Hardy"
 role["character_name"] = "Bane"
 role.save
 
 role = Role.new
-role["movie"] = "The Dark Night Rises"
+role["movie"] = "The Dark Knight Rises"
 role["actor"] = " Joseph Gordon Levitt"
 role["character_name"] = "John Blake"
 role.save
 
 role = Role.new
-role["movie"] = "The Dark Night Rises"
+role["movie"] = "The Dark Knight Rises"
 role["actor"] = "Anne Hathaway"
 role["character_name"] = " Selina Kyle"
 role.save
@@ -266,8 +285,6 @@ for movie in movies
     year_released = movie["year_released"]
     rated = movie["rated"]
     studio = movie["studio"]
-
-    puts 
 end
    
 # Prints a header for the cast output
